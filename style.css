@@ -2,18 +2,16 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: repeating-linear-gradient(
-    45deg,
-    #ff3d3d,
-    #ff3d3d 50px,
-    #d83131 50px,
-    #c92d2d 100px
-  );
-  background-attachment: fixed;
   color: #fff;
+  background:
+    linear-gradient(90deg, #b81f1f 50%, #b54545 50%),
+    linear-gradient(#ffa425 50%, #ffe699 50%);
+  background-size: 120px 120px;
+
 }
 
-/* Tarjeta principal */
+
+
 .card {
   display: flex;
   background: rgba(40, 15, 15, 0.95);
@@ -26,10 +24,10 @@ body {
   backdrop-filter: blur(4px);
 }
 
-/* Imagen */
+
 .perfil {
   flex: 1;
-  background: #FFB34722; /* un tono naranja transparente */
+  background: #FFB34722;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,7 +41,12 @@ body {
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-/* Contenido */
+.perfil img:hover {
+  transition: transform 0.5s;
+  transform: scale(1.05);
+}
+
+
 .contenido {
   flex: 2;
   padding: 30px;
@@ -51,11 +54,11 @@ body {
 
 h1 {
   margin-top: 0;
-  color: #ffa047; /* doradito otoñal */
+  color: #ff5a5a;
   font-size: 2.2rem;
 }
 
-/* Botones de links */
+
 .links a {
   display: inline-block;
   margin: 8px;
@@ -74,7 +77,7 @@ h1 {
   transform: scale(1.05);
 }
 
-/* Galería */
+
 .galeria {
   display: flex;
   gap: 15px;
@@ -93,16 +96,15 @@ h1 {
   transform: scale(1.05);
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 15px;
   margin-top: 20px;
-  color: #FFDAB9;
+  color: #ffcece;
   font-size: 0.9rem;
 }
 
-/* Ajuste para pantallas pequeñas (celulares) */
+
 @media (max-width: 768px) {
   .card {
     flex-direction: column;
